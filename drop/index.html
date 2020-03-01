@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            body{
+               margin: 0;
+               padding: 0;
+               background: #F4E2C9;
+            }
+            .stage{
+                width: 300px;
+                height: 350px;
+                background: white;
+                margin: 100px;
+                transform-style: preserve-3d;
+            }
+            .stage p{
+                width: 55px;
+                padding: 5px;
+                background: #FF7373;
+                color: white;
+                font-weight: 600;
+                transform:translateY(-10px) translateX(-5px) ;
+            }
+            ul.content{
+                padding: 0;
+                margin: 0px auto;
+                list-style: none;
+                width: 250px;
+                height: 300px;
+                background-image: linear-gradient(#CCFFCC,#99CCCC,#FFFFCC);
+            }
+            ul.content li{
+                text-align: center;
+                line-height: 36px;
+                width: 100%;
+                height:12%;
+               margin: 5px 0;
+                background: lightcoral;
+                border-radius: 5px;
+                color: white;
+                font-family: '华文中宋';
+                cursor: all-scroll;
+            }
+        </style>
+	</head>
+	<body>
+        <div class="stage">
+            <p>ListA</p>
+		    <ul class="content">
+			<li style="background: #CCFFFF" id="text1">abandon</li>
+			<li style="background: #FFFF99" id="text2">ability</li>
+			<li style="background: #99CC66" id="text3">able</li>
+			<li style="background: #FF6666" id="text4">abnormal</li>
+			<li style="background: #FFCC99" id="text5">abortion</li>
+            <li style="background: #CCCC99" id="text6">above</li>
+            <li style="background: #FFFF00" id="text7">abroad</li>
+         </ul>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+        <script>
+           
+          
+        //    var current=0;
+            function drag(event) {
+                // console.log(event);
+				event.dataTransfer.setData("Text", event.target.id);
+			}
+            $('.content li').mousedown(function(){
+                $(this).attr("draggable",true).siblings().removeAttr('ondragstart')
+                $(this).attr("ondragstart","drag(event)").siblings().removeAttr('ondragstart')
+                // console.log($(this).index());
+                // current = $(this).index()
+            })  
+
+            $('.content li').on('dragover',function(event){
+                event.preventDefault() 
+            })
+          
+            $('.content li').on('drop',function(event){
+                console.log(event);
+                event.preventDefault();
+                if(event.offsetY>18){
+                    event.target.after(document.getElementById(event.originalEvent.dataTransfer.getData("Text")));
+                }else{
+                    event.target.before(document.getElementById(event.originalEvent.dataTransfer.getData("Text")));
+                }
+                
+            }) 
+
+        </script>
+	</body>
+</html>

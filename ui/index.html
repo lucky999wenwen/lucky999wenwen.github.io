@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>广州UI设计-用户界面设计-木一设计工作室|周艳文个人网站</title>
+    <link rel="shortcut icon" href="./images/logo.ico" /> 
+    <meta name="keywords" content="广州UI设计，网页设计，设计公司，UI设计工作室，ui设计工作室，UI设计，app设计，网站设计，平面设计、logo设计，海报设计、品牌设计">
+		<meta name="description" content="木一设计工作室，提供用户体验设计与互联网品牌建设，原型图设计 、UI界面设计、网页设计、移动界面设计、软件界面设计、logo设计、创意设计等服务">
+</head>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/donghua.css">
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<style>
+  /* 导航样式 */
+  .active {
+    background: white;
+    transition: all 1s;
+  }
+  .navbar-default .navbar-nav > li > a.actives {
+    color: #333333;
+  }
+  .navbar-default .navbar-nav > li > a.actives:hover {
+    color: #03585e;
+  }
+  .shownav {
+    color: #333333;
+    transition: all 1s;
+    position: static;
+    
+  }
+  @media (max-width: 768px){
+    /* .cont4 .container .content{
+    } */
+    .cont4 .boxC{
+      height: 185px
+    }
+  }
+</style>
+
+
+<body>
+    <!-- <div class="container-fluid">    -->
+        <!-- 固定宽度 -->
+        <!-- <div class="container">
+            <div class="col-md-3 box col-sm-6 .col-lg-4">1</div>
+            <div class="col-md-3 box col-sm-6 .col-lg-4">2</div>
+            <div class="col-md-3 box col-sm-6 .col-lg-4">3</div>
+            <div class="col-md-3 box col-sm-6 .col-lg-4">4</div>
+            
+          </div>
+    </div> -->
+
+    <!-- 导航（保留） -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <!-- <img src="./images/brand.png" alt=""> -->
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#carousel-example-generic">首页</a></li>
+            <li><a href="#serve">服务</a></li>
+            <li><a href="#case">案例</a></li>
+            <li><a href="#brand">关于</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+      <!-- 轮播图 -->
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active  banner_box">
+            <img class="img-responsive" src="./images/banner01.jpg" alt="banner">
+            <div class="carousel-caption">
+              <!-- 文案1 -->
+            </div>
+          </div>
+          <div class="item banner_box">
+            <img class="img-responsive" src="./images/banner01.jpg" alt="banner">
+            <div class="carousel-caption">
+              <!-- 文案1 -->
+            </div>
+          </div>
+          <div class="item banner_box">
+            <img class="img-responsive" src="./images/banner01.jpg" alt="banner">
+            <div class="carousel-caption">
+              <!-- 文案1 -->
+            </div>
+          </div>
+        </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>  
+
+
+      <!-- 内容1 服务范围-->
+    <div class="cont1">
+      <div class="container">       
+        <h1 id="serve">服务范围</h1>
+        <h4>—Scope of work—</h4>
+        <div class="content col-md-3 col-sm-6 col-xs-6 boxB">        
+            <div class="fuwu-btn">
+              <img class="img-responsive" src="./images/icon-01.png" alt="icon">
+            </div>
+            <h2>网页设计</h2>
+            <!-- <h3>用户研究、产品策略及产品设计、交互与视觉设计、WEB前端开发等</h3> -->
+        </div>
+        <div class="content col-md-3 col-sm-6 col-xs-6 boxB">
+          <div class="fuwu-btn">
+            <img class="img-responsive" src="./images/icon-02.png" alt="icon">
+          </div>
+            <h2>移动端设计</h2>
+            <!-- <h3>创意策划、动效设计、h5设计和开发、宣传视频制作、运营设计支持等</h3> -->
+        </div>
+        <div class="content col-md-3 col-sm-6 col-xs-6 boxB">
+          <div class="fuwu-btn">
+            <img class="img-responsive" src="./images/icon-03.png" alt="icon">
+          </div>
+            <h2>交互设计</h2>
+            <!-- <h3>品牌策略、标志设计、VI设计、画册设计、网页设计及网站建设等</h3> -->
+        </div>
+        <div class="content col-md-3 col-sm-6 col-xs-6 boxB">
+          <div class="fuwu-btn">
+            <img class="img-responsive" src="./images/icon-04.png" alt="icon">
+          </div>
+          <h2>平面设计</h2>
+          <!-- <h3>用户研究、产品策略及产品设计、交互与视觉设计、WEB前端开发等</h3> -->
+      </div>
+    </div>
+    </div>
+
+    <!-- 内容4 -->
+    <div class="cont4">
+      <div class="container">       
+        <h1 id="case">案例展示</h1>
+        <h4>—Case presentation—</h4>
+        <div class="content col-md-4 col-sm-6 col-xs-12 boxC">
+          <div class="hovereffect">
+            <div class="img"></div>
+            <a href="indexApp.html">
+              <div class="overlay">
+                <h2>APP</h2>
+                <p>独家定制，给更好的你</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="content col-md-4 col-sm-6 col-xs-12 boxC">
+          <div class="hovereffect">
+            <div class="img"></div>
+            <a href="indexWeb.html">
+              <div class="overlay">
+                <h2>网页设计</h2>
+                <p>独家定制，给更好的你</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="content col-md-4 col-sm-6 col-xs-12 boxC">
+          <div class="hovereffect">
+            <div class="img"></div>
+            <a href="indexVi.html">
+              <div class="overlay">
+                <h2>VI手册</h2>
+                <p>独家定制，给更好的你</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="content col-md-4 col-sm-6 col-xs-12 boxC">
+          <div class="hovereffect">
+            <div class="img"></div>
+            <a href="indexIn.html">
+              <div class="overlay">
+                <h2>插画</h2>
+                <p>独家定制，给更好的你</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="content col-md-4 col-sm-6 col-xs-12 boxC">
+          <div class="hovereffect">
+            <div class="img"></div>
+            <a href="indexFold.html">
+              <div class="overlay">
+                <h2>折页</h2>
+                <p>独家定制，给更好的你</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="content col-md-4 col-sm-6 col-xs-12 boxC">
+          <div class="hovereffect">
+            <div class="img"></div>
+            <a href="indexIcon.html">
+              <div class="overlay">
+                <h2>Icon</h2>
+                <p>独家定制，给更好的你</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------btn-more--------------- -->
+    <div class="more">
+      <div class="container">
+        <a href="caseList.html"><div class="moreBtn">查看更多</div></a>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="cont5">
+      <div class="container">
+        <h1 id="brand">品牌故事</h1>
+        <h4>—Brand story—</h4>
+        <p> 明有奇巧人曰王叔远，能以径寸之木，为宫室、器皿、人物，以至鸟兽、木石，罔不因势象形，各具情态。
+          尝贻余核舟一，盖大苏泛赤壁云。<br>（一个“长不盈寸”的桃核，却生动地再现了宋代文坛上的一个著名典故——“大苏泛赤壁”。）
+          <br>
+          又如佛曰：一花一世界，一木一浮生。<br>
+          寻常细微之物常是大千世界的缩影，无限往往珍藏于有限之中。
+        </p>
+      </div>
+    </div>
+
+    <!-- 底部（保留） -->
+    <div class="footer">
+      <div class="container">
+        <div class="col-md-3 fo">
+          <span></span>
+          <p>木一UI设计工作室</p>
+        </div>
+        <div class="col-md-3 fo touch">      
+            <a href="tel://15121459342">电话：15121459342</a><br>
+            <a href="qq:1120356500">QQ：1120356500</a>       
+        </div>          
+        <div class="col-md-3 fo">
+            <a href="qq:1120356500">邮箱：1120356500@qq.com</a>
+        </div>
+        <div class="col-md-3 wechat">
+            <img src="./images/weChat.png" alt="微信二维码">
+        </div>
+      </div>
+    </div>
+
+    <!-- 头部导航效果 -->
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+      var isscroll = false;
+      $(function() {
+        /*导航跳转效果插件*/
+        $(".nav").singlePageNav({
+          offset: 70
+        });
+        /*小屏幕导航点击关闭菜单*/
+        $(".navbar-collapse a").click(function() {
+          $(".navbar-collapse").collapse("hide");
+        });
+      });
+
+      // $('.navbar')
+      document.body.onscroll = function() {
+        if (window.pageYOffset > $(".navbar").height()) {
+          $(".navbar .navbar-brand").css({ backgroundPosition: "0 95%" });
+          isscroll = true;
+          $(".navbar").addClass("active");
+          // $(".navbar").css({'background': 'white'},{"color":"#000"},{ "transition": "all 0.5s"})
+          $(".navbar")
+            .find("a")
+            .addClass("actives");
+          $(".navbar-fixed-top").removeClass("shownav");
+        } else {
+          $(".navbar .navbar-brand").css({ backgroundPosition: "0 20%" });
+          isscroll = false;
+          $(".navbar").removeClass("active");
+          $(".navbar")
+            .find("a")
+            .removeClass("actives");
+        }
+      };
+      var click = false;
+      $(".navbar-toggle").on("click", function() {
+        click = !click;
+        if (!isscroll) {
+          if (click) {
+
+            $(".navbar-fixed-top").addClass("shownav");
+            $(".navbar")
+              .find("a")
+              .addClass("actives");
+              $(".navbar .navbar-brand").css({ backgroundPosition: "0 95%" });
+          } else {
+            $(".navbar-fixed-top").removeClass("shownav");
+            $(".navbar")
+              .find("a")
+              .removeClass("actives");
+              $(".navbar .navbar-brand").css({ backgroundPosition: "0 20%" });
+          }
+        }
+      });
+
+
+      // $('.navbar')
+      // document.body.onscroll = function() {
+      //   if (window.pageYOffset > $(".navbar").height()) {
+      //     isscroll=true
+      //     $(".navbar").addClass("active");
+      //     $(".navbar")
+      //       .find("a")
+      //       .addClass("actives");
+      //     $(".navbar-fixed-top").removeClass("shownav");
+      //   } else {
+      //     isscroll=false
+      //     $(".navbar").removeClass("active");
+      //     $(".navbar")
+      //       .find("a")
+      //       .removeClass("actives");
+      //   }
+      // };
+      // var click = false;
+      // $(".navbar-toggle").on("click", function() {
+      //   click = !click;
+      //   if(!isscroll){
+      //     if (click) {
+      //     $(".navbar-fixed-top").addClass("shownav");
+      //     $(".navbar")
+      //       .find("a")
+      //       .addClass("actives");     
+      //   } else {
+      //     $(".navbar-fixed-top").removeClass("shownav");
+      //     $(".navbar")
+      //       .find("a")
+      //       .removeClass("actives");
+      //   }
+      //   }      
+      // });
+
+      </script>
+      
+
+</body>
+</html>

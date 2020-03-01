@@ -1,0 +1,118 @@
+@sms:768px;
+@mds:992px;
+@lgs:1200px;
+.clearfix() {
+    *zoom: 1;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+.rows{
+    .clearfix;
+}
+[class*=col-] {
+    float: left;
+}
+.containers{
+    margin: 0px auto;
+    padding: 0px 15px;
+    width: 100%;
+}
+
+// .generate-xs-columns(@n, @i: 1) when (@i =< @n) {
+//     .col-xs-@{i} {
+//         width: (@i * 100% / @n);
+//     }
+
+//     .generate-xs-columns(@n, (@i + 1));
+// }
+// .generate-xs-columns(12);
+.make-grid(@s, @n) {
+    .generate-columns(@n, @i: 1) when (@i =< @n) {
+        .col-@{s}-@{i} {
+            width: (@i * 100% / @n);
+        }
+
+        .generate-columns(@n, (@i + 1));
+    }
+
+    .generate-columns(@n)
+}
+
+.make-grid(xss, 10);
+@media (min-width:@sms) {
+    .containers{
+        margin: 0px auto;
+        padding: 0px 15px;
+        width: 100%;
+    }
+    .rows{
+        margin: 0 -15px;
+     }
+    .make-grid(sms,10);
+}
+@media (min-width:@mds) {
+    .containers{
+        margin: 0px auto;
+        padding: 0px 15px;
+        width: 960px;
+    }
+    .rows{
+        margin: 0 -15px;
+     }
+    .make-grid(mds,10);
+}
+@media (min-width:@lgs) {
+    .containers{
+        margin: 0px auto;
+        padding: 0px 15px;
+        width: 1200px;
+    }
+    .rows{
+       margin: 0 -15px;
+    }
+    .make-grid(lgs,10);
+
+}
+.make-grid(xss, 12);
+@media (min-width:@sms) {
+    .containers{
+        margin: 0px auto;
+        padding: 0px 15px;
+        width: 100%;
+    }
+    .rows{
+        margin: 0 -15px;
+     }
+    .make-grid(sms,10);
+}
+@media (min-width:@mds) {
+    .containers{
+        margin: 0px auto;
+        padding: 0px 15px;
+        width: 960px;
+    }
+    .rows{
+        margin: 0 -15px;
+     }
+    .make-grid(mds,10);
+}
+@media (min-width:@lgs) {
+    .containers{
+        margin: 0px auto;
+        padding: 0px 15px;
+        width: 1200px;
+    }
+    .rows{
+       margin: 0 -15px;
+    }
+    .make-grid(lgs,10);
+
+}

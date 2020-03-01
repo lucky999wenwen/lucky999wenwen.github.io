@@ -1,0 +1,326 @@
+.rows {
+  *zoom: 1;
+}
+.rows::after {
+  content: '';
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+[class*=col-] {
+  float: left;
+}
+.containers {
+  margin: 0px auto;
+  padding: 0px 15px;
+  width: 100%;
+}
+.col-xss-1 {
+  width: 10%;
+}
+.col-xss-2 {
+  width: 20%;
+}
+.col-xss-3 {
+  width: 30%;
+}
+.col-xss-4 {
+  width: 40%;
+}
+.col-xss-5 {
+  width: 50%;
+}
+.col-xss-6 {
+  width: 60%;
+}
+.col-xss-7 {
+  width: 70%;
+}
+.col-xss-8 {
+  width: 80%;
+}
+.col-xss-9 {
+  width: 90%;
+}
+.col-xss-10 {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .containers {
+    margin: 0px auto;
+    padding: 0px 15px;
+    width: 100%;
+  }
+  .rows {
+    margin: 0 -15px;
+  }
+  .col-sms-1 {
+    width: 10%;
+  }
+  .col-sms-2 {
+    width: 20%;
+  }
+  .col-sms-3 {
+    width: 30%;
+  }
+  .col-sms-4 {
+    width: 40%;
+  }
+  .col-sms-5 {
+    width: 50%;
+  }
+  .col-sms-6 {
+    width: 60%;
+  }
+  .col-sms-7 {
+    width: 70%;
+  }
+  .col-sms-8 {
+    width: 80%;
+  }
+  .col-sms-9 {
+    width: 90%;
+  }
+  .col-sms-10 {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .containers {
+    margin: 0px auto;
+    padding: 0px 15px;
+    width: 960px;
+  }
+  .rows {
+    margin: 0 -15px;
+  }
+  .col-mds-1 {
+    width: 10%;
+  }
+  .col-mds-2 {
+    width: 20%;
+  }
+  .col-mds-3 {
+    width: 30%;
+  }
+  .col-mds-4 {
+    width: 40%;
+  }
+  .col-mds-5 {
+    width: 50%;
+  }
+  .col-mds-6 {
+    width: 60%;
+  }
+  .col-mds-7 {
+    width: 70%;
+  }
+  .col-mds-8 {
+    width: 80%;
+  }
+  .col-mds-9 {
+    width: 90%;
+  }
+  .col-mds-10 {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .containers {
+    margin: 0px auto;
+    padding: 0px 15px;
+    width: 1200px;
+  }
+  .rows {
+    margin: 0 -15px;
+  }
+  .col-lgs-1 {
+    width: 10%;
+  }
+  .col-lgs-2 {
+    width: 20%;
+  }
+  .col-lgs-3 {
+    width: 30%;
+  }
+  .col-lgs-4 {
+    width: 40%;
+  }
+  .col-lgs-5 {
+    width: 50%;
+  }
+  .col-lgs-6 {
+    width: 60%;
+  }
+  .col-lgs-7 {
+    width: 70%;
+  }
+  .col-lgs-8 {
+    width: 80%;
+  }
+  .col-lgs-9 {
+    width: 90%;
+  }
+  .col-lgs-10 {
+    width: 100%;
+  }
+}
+.col-xss-1 {
+  width: 8.33333333%;
+}
+.col-xss-2 {
+  width: 16.66666667%;
+}
+.col-xss-3 {
+  width: 25%;
+}
+.col-xss-4 {
+  width: 33.33333333%;
+}
+.col-xss-5 {
+  width: 41.66666667%;
+}
+.col-xss-6 {
+  width: 50%;
+}
+.col-xss-7 {
+  width: 58.33333333%;
+}
+.col-xss-8 {
+  width: 66.66666667%;
+}
+.col-xss-9 {
+  width: 75%;
+}
+.col-xss-10 {
+  width: 83.33333333%;
+}
+.col-xss-11 {
+  width: 91.66666667%;
+}
+.col-xss-12 {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .containers {
+    margin: 0px auto;
+    padding: 0px 15px;
+    width: 100%;
+  }
+  .rows {
+    margin: 0 -15px;
+  }
+  .col-sms-1 {
+    width: 10%;
+  }
+  .col-sms-2 {
+    width: 20%;
+  }
+  .col-sms-3 {
+    width: 30%;
+  }
+  .col-sms-4 {
+    width: 40%;
+  }
+  .col-sms-5 {
+    width: 50%;
+  }
+  .col-sms-6 {
+    width: 60%;
+  }
+  .col-sms-7 {
+    width: 70%;
+  }
+  .col-sms-8 {
+    width: 80%;
+  }
+  .col-sms-9 {
+    width: 90%;
+  }
+  .col-sms-10 {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .containers {
+    margin: 0px auto;
+    padding: 0px 15px;
+    width: 960px;
+  }
+  .rows {
+    margin: 0 -15px;
+  }
+  .col-mds-1 {
+    width: 10%;
+  }
+  .col-mds-2 {
+    width: 20%;
+  }
+  .col-mds-3 {
+    width: 30%;
+  }
+  .col-mds-4 {
+    width: 40%;
+  }
+  .col-mds-5 {
+    width: 50%;
+  }
+  .col-mds-6 {
+    width: 60%;
+  }
+  .col-mds-7 {
+    width: 70%;
+  }
+  .col-mds-8 {
+    width: 80%;
+  }
+  .col-mds-9 {
+    width: 90%;
+  }
+  .col-mds-10 {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .containers {
+    margin: 0px auto;
+    padding: 0px 15px;
+    width: 1200px;
+  }
+  .rows {
+    margin: 0 -15px;
+  }
+  .col-lgs-1 {
+    width: 10%;
+  }
+  .col-lgs-2 {
+    width: 20%;
+  }
+  .col-lgs-3 {
+    width: 30%;
+  }
+  .col-lgs-4 {
+    width: 40%;
+  }
+  .col-lgs-5 {
+    width: 50%;
+  }
+  .col-lgs-6 {
+    width: 60%;
+  }
+  .col-lgs-7 {
+    width: 70%;
+  }
+  .col-lgs-8 {
+    width: 80%;
+  }
+  .col-lgs-9 {
+    width: 90%;
+  }
+  .col-lgs-10 {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=./grid.css.map */

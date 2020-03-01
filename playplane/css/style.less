@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background: lightgreen;
+    overflow: hidden;
+
+    .stage {
+        width: 200%;
+        height: 100%;
+        // margin-left:-100%;
+        // background: lightsalmon;
+
+        .action {
+            position: relative;
+            left: 0px;
+            width: 50%;
+            height: 100%;
+            float: left;
+            background-size: cover;
+            background-position: center 0px;
+            // background-repeat: repeat-y;
+            // position: relative;
+            background-image: url('../images/background.jpg');
+            text-align: center;
+            h3{
+                font-family: 'Great Vibes', cursive;
+                line-height: -0%;
+                font-weight: 400;
+            }
+
+            button.actiongame {
+                position: absolute;
+                bottom: 100px;
+                color: black;
+                left: 50%;
+                width: 120px;
+                margin-left: -60px;
+                line-height: 30px;
+                background: orange;
+                outline: none;
+                border: 1px solid black;
+                border-radius: 30px;
+            }
+        }
+
+        .playgame {
+            width: 50%;
+            height: 100%;
+            float: left;
+            background-size: cover;
+            background-position: center 0px;
+            background-repeat: repeat-y;
+            position: relative;
+            background-image: url("../images/background-game.png");
+
+            img {
+                position: absolute;
+            }
+
+            span.grade {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                // background: red;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 1.5em;
+            }
+
+            .ranking {
+                width: 60%;
+                margin: 0 auto;
+                border-radius: 5px;
+                border: 1px solid black;
+                transition: all 0.3s;
+                // padding: 15px;
+                position: relative;
+                z-index: 9;
+
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    background: #c3c8c9;
+
+                    td,
+                    th {
+                        border: 1px solid black;
+                        text-align: center;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            .dead {
+                transition: all 0.3s;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -100px;
+                button {
+                    position: absolute;
+                    left: 50%;
+                    width: 120px;
+                    margin-left: -60px;
+                    line-height: 30px;
+                    background: #c4c9ca;
+                    outline: none;
+                    border: 1px solid black;
+                    border-radius: 30px;
+                    display: block;
+                    position: static;
+                    margin: 10px auto;
+                    z-index: 9;
+                    background: #c3c8c9;
+                }
+            }
+        }
+    }
+}

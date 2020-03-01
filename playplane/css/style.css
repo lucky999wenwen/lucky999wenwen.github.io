@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: lightgreen;
+  overflow: hidden;
+}
+body .stage,
+html .stage {
+  width: 200%;
+  height: 100%;
+}
+body .stage .action,
+html .stage .action {
+  position: relative;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  float: left;
+  -moz-background-size: cover;
+       background-size: cover;
+  background-position: center 0px;
+  background-image: url('../images/background.jpg');
+  text-align: center;
+}
+body .stage .action h3,
+html .stage .action h3 {
+  font-family: 'Great Vibes', cursive;
+  line-height: 0%;
+  font-weight: 400;
+}
+body .stage .action button.actiongame,
+html .stage .action button.actiongame {
+  position: absolute;
+  bottom: 100px;
+  color: black;
+  left: 50%;
+  width: 120px;
+  margin-left: -60px;
+  line-height: 30px;
+  background: orange;
+  outline: none;
+  border: 1px solid black;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+}
+body .stage .playgame,
+html .stage .playgame {
+  width: 50%;
+  height: 100%;
+  float: left;
+  -moz-background-size: cover;
+       background-size: cover;
+  background-position: center 0px;
+  background-repeat: repeat-y;
+  position: relative;
+  background-image: url("../images/background-game.png");
+}
+body .stage .playgame img,
+html .stage .playgame img {
+  position: absolute;
+}
+body .stage .playgame span.grade,
+html .stage .playgame span.grade {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5em;
+}
+body .stage .playgame .ranking,
+html .stage .playgame .ranking {
+  width: 60%;
+  margin: 0 auto;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid black;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 9;
+}
+body .stage .playgame .ranking table,
+html .stage .playgame .ranking table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #c3c8c9;
+}
+body .stage .playgame .ranking table td,
+html .stage .playgame .ranking table td,
+body .stage .playgame .ranking table th,
+html .stage .playgame .ranking table th {
+  border: 1px solid black;
+  text-align: center;
+  line-height: 24px;
+}
+body .stage .playgame .dead,
+html .stage .playgame .dead {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -100px;
+}
+body .stage .playgame .dead button,
+html .stage .playgame .dead button {
+  position: absolute;
+  left: 50%;
+  width: 120px;
+  margin-left: -60px;
+  line-height: 30px;
+  background: #c4c9ca;
+  outline: none;
+  border: 1px solid black;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+  display: block;
+  position: static;
+  margin: 10px auto;
+  z-index: 9;
+  background: #c3c8c9;
+}
+/*# sourceMappingURL=./style.css.map */

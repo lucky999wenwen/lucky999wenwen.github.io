@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>广州UI设计-用户界面设计-木一设计工作室|周艳文个人网站</title>
+    <link rel="shortcut icon" href="./images/logo.ico" /> 
+    <meta name="keywords" content="广州UI设计，网页设计，设计公司，UI设计工作室，ui设计工作室，UI设计，app设计，网站设计，平面设计、logo设计，海报设计、品牌设计">
+		<meta name="description" content="木一设计工作室，提供用户体验设计与互联网品牌建设，原型图设计 、UI界面设计、网页设计、移动界面设计、软件界面设计、logo设计、创意设计等服务">
+</head>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/caseList.css">
+<link rel="stylesheet" href="./css/index1.css">
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<style>
+  /* 导航样式 */
+  .active {
+    background: white;
+    transition: all 1s;
+  }
+  .navbar-default .navbar-nav > li > a.actives {
+    color: #333333;
+  }
+  .navbar-default .navbar-nav > li > a.actives:hover {
+    color: #03585e;
+  }
+  .shownav {
+    color: #333333;
+    transition: all 1s;
+    position: static;
+  }
+    
+ /* -------------------------------  */
+    /* .list{
+        margin-bottom: 20px;
+    } */
+    .bg{
+        width: 100%;
+        height: 600px;
+        background-image: url("./images/banner02.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+    .serve{
+        padding: 80px 0;
+    }
+    h1{
+      color: #03585e;
+  }
+    h5{
+      line-height: 30px;
+      text-align: center;
+      color: #1b1b1b;
+  }
+</style>
+
+
+<body>
+
+    <!-- 导航（保留） -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <!-- <img src="./images/brand.png" alt=""> -->
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#carousel-example-generic">首页</a></li>
+            <li><a href="#serve">服务</a></li>
+            <li><a href="#case">案例</a></li>
+            <li><a href="#brand">关于</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="list">
+      <!-- <img class="img-responsive one" src="./images/banner02.jpg" alt="网页"> -->
+      <div class="bg">
+        <div class="container serve">
+            <div class="col-md-3 col-sm-12">
+                <h1>网页设计</h1>
+                <h4>Web Design</h4>
+                <h5>
+                    网站策划、网站搭建
+                    <br>
+                    内容界面设计用户体验设计
+                </h5>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h1>移动端设计</h1>
+                <h4>Mobile Terminal Design</h4>
+                <h5>
+                    APP设计图标设计
+                    <br>
+                    动效设计产品原型设计
+                </h5>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h1>交互设计</h1>
+                <h4>Interaction Design</h4>
+                <h5>
+                    熟悉产品流程交互规范
+                    <br>
+                    制定符合用户体验的交互原型设计
+                </h5>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h1>平面设计</h1>
+                <h4>
+                    Graphic Artist Designer
+                </h4>
+                <h5>
+                    VI设计商标设计
+                    <br>
+                    广告设计品牌设计
+                </h5>
+            </div>
+    
+          </div>
+      </div>
+    </div>
+
+
+    <!-- 底部（保留） -->
+    <div class="footer">
+      <div class="container">
+        <div class="col-md-3 fo">
+          <span></span>
+          <p>木一UI设计工作室</p>
+        </div>
+        <div class="col-md-3 fo touch">      
+            <a href="tel://15121459342">电话：15121459342</a><br>
+            <a href="qq:1120356500">QQ：1120356500</a>       
+        </div>          
+        <div class="col-md-3 fo">
+            <a href="qq:1120356500">邮箱：1120356500@qq.com</a>
+        </div>
+        <div class="col-md-3 wechat">
+            <img src="./images/weChat.png" alt="微信二维码">
+        </div>
+      </div>
+    </div>
+
+    <!-- 头部导航效果 -->
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+      var isscroll = false;
+      $(function() {
+        /*导航跳转效果插件*/
+        $(".nav").singlePageNav({
+          offset: 70
+        });
+        /*小屏幕导航点击关闭菜单*/
+        $(".navbar-collapse a").click(function() {
+          $(".navbar-collapse").collapse("hide");
+        });
+      });
+
+      // $('.navbar')
+      document.body.onscroll = function() {
+        if (window.pageYOffset > $(".navbar").height()) {
+          $(".navbar .navbar-brand").css({ backgroundPosition: "0 95%" });
+          isscroll = true;
+          $(".navbar").addClass("active");
+          // $(".navbar").css({'background': 'white'},{"color":"#000"},{ "transition": "all 0.5s"})
+          $(".navbar")
+            .find("a")
+            .addClass("actives");
+          $(".navbar-fixed-top").removeClass("shownav");
+        } else {
+          $(".navbar .navbar-brand").css({ backgroundPosition: "0 20%" });
+          isscroll = false;
+          $(".navbar").removeClass("active");
+          $(".navbar")
+            .find("a")
+            .removeClass("actives");
+        }
+      };
+      var click = false;
+      $(".navbar-toggle").on("click", function() {
+        click = !click;
+        if (!isscroll) {
+          if (click) {
+
+            $(".navbar-fixed-top").addClass("shownav");
+            $(".navbar")
+              .find("a")
+              .addClass("actives");
+              $(".navbar .navbar-brand").css({ backgroundPosition: "0 95%" });
+          } else {
+            $(".navbar-fixed-top").removeClass("shownav");
+            $(".navbar")
+              .find("a")
+              .removeClass("actives");
+              $(".navbar .navbar-brand").css({ backgroundPosition: "0 20%" });
+          }
+        }
+      });
+
+      </script>
+      
+
+</body>
+</html>

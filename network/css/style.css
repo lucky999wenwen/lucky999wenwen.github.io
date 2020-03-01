@@ -1,0 +1,386 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #E4E4E4;
+}
+body .header,
+html .header {
+  width: 85%;
+  margin: 0px auto;
+  background: sandybrown;
+}
+body .header .back,
+html .header .back {
+  width: 85%;
+  height: 60px;
+  background: rgba(86, 94, 46, 0.02);
+  position: fixed;
+  z-index: 50;
+  transition: all 1s;
+  display: none;
+}
+body .header .back .incon,
+html .header .back .incon {
+  width: 1080px;
+  margin: 10px auto;
+}
+body .header .back .incon ul.time,
+html .header .back .incon ul.time {
+  padding: 0px 15px;
+  width: 200px;
+}
+body .header .back .incon ul.time::after,
+html .header .back .incon ul.time::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+body .header .back .incon ul.time li,
+html .header .back .incon ul.time li {
+  font-size: 16px;
+  float: left;
+}
+body .header .back .incon ul.day,
+html .header .back .incon ul.day {
+  width: 200px;
+}
+body .header .back .incon ul.day::after,
+html .header .back .incon ul.day::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+body .header .back .incon ul.day li,
+html .header .back .incon ul.day li {
+  font-size: 14px;
+  float: left;
+}
+body .header .novel,
+html .header .novel {
+  width: 1100px;
+  margin: 0px auto;
+  position: relative;
+}
+body .header .novel .title,
+html .header .novel .title {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: '楷体';
+}
+body .header .novel .menu,
+html .header .novel .menu {
+  position: fixed;
+  top: 100px;
+  left: 150px;
+}
+body .header .novel .menu > li,
+html .header .novel .menu > li {
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: '华文楷体';
+  border-radius: 8px;
+}
+body .header .novel .menu > li p,
+html .header .novel .menu > li p {
+  width: 60px;
+  padding: 0px 8px;
+  background: lightsalmon;
+}
+body .header .novel .menu > li:nth-child(1) .backcolr,
+html .header .novel .menu > li:nth-child(1) .backcolr {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+  width: 600px;
+  height: 400px;
+  background: #FEFDF7;
+  display: none;
+}
+body .header .novel .menu > li:nth-child(1) .backcolr .theme,
+html .header .novel .menu > li:nth-child(1) .backcolr .theme {
+  text-align: center;
+  font-size: 0px;
+}
+body .header .novel .menu > li:nth-child(1) .backcolr .theme h3,
+html .header .novel .menu > li:nth-child(1) .backcolr .theme h3 {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+body .header .novel .menu > li:nth-child(1) .backcolr .theme .box,
+html .header .novel .menu > li:nth-child(1) .backcolr .theme .box {
+  width: 0px;
+  height: 0px;
+  border: 30px solid;
+  border-color: transparent lightsalmon transparent transparent;
+  position: absolute;
+  left: -60px;
+  top: 0px;
+}
+body .header .novel .menu > li:nth-child(1) .backcolr .theme span,
+html .header .novel .menu > li:nth-child(1) .backcolr .theme span {
+  line-height: 70px;
+  font-size: 16px;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr,
+html .header .novel .menu > li:nth-child(2) .backcolr {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+  width: 400px;
+  height: 400px;
+  background: #FEFDF7;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme {
+  text-align: center;
+  font-size: 0px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme h3,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme h3 {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme .box,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme .box {
+  width: 0px;
+  height: 0px;
+  border: 30px solid;
+  border-color: transparent lightsalmon transparent transparent;
+  position: absolute;
+  left: -60px;
+  top: 50px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme span,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme span {
+  font-size: 16px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: limegreen;
+  margin-left: 10px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme .t1,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme .t1 {
+  border: 1px lightcyan solid;
+  background: #FAF9DE;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme .t2,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme .t2 {
+  border: 1px lightcyan solid;
+  background: #FFF2E2;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme .t3,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme .t3 {
+  border: 1px lightcyan solid;
+  background: #E3EDCD;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme .t4,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme .t4 {
+  border: 1px lightcyan solid;
+  background: #DCE2F1;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .theme .t5,
+html .header .novel .menu > li:nth-child(2) .backcolr .theme .t5 {
+  border: 1px lightcyan solid;
+  background: #EAEAEF;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .font,
+html .header .novel .menu > li:nth-child(2) .backcolr .font {
+  padding: 30px 5px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .font span,
+html .header .novel .menu > li:nth-child(2) .backcolr .font span {
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  margin-left: 10px;
+  padding: 5px 0px;
+  background: white;
+  border: 1px solid #CDDFCD;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .fontsize,
+html .header .novel .menu > li:nth-child(2) .backcolr .fontsize {
+  font-size: 0px;
+  padding: 0px 5px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .fontsize b,
+html .header .novel .menu > li:nth-child(2) .backcolr .fontsize b {
+  font-size: 18px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list,
+html .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list {
+  display: inline-block;
+  border: 1px solid #CDDFCD;
+  margin-left: 20px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list span,
+html .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list span {
+  font-size: 18px;
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  padding: 3px 0px;
+  background: white;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list span:hover,
+html .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list span:hover {
+  color: limegreen ;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list h5,
+html .header .novel .menu > li:nth-child(2) .backcolr .fontsize .list h5 {
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  width: 60px;
+  padding: 0px 0px;
+  border-left: 1px solid #CDDFCD;
+  border-right: 1px solid #CDDFCD;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .selfmotion,
+html .header .novel .menu > li:nth-child(2) .backcolr .selfmotion {
+  font-size: 0px;
+  padding: 30px 5px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .selfmotion b,
+html .header .novel .menu > li:nth-child(2) .backcolr .selfmotion b {
+  font-size: 18px;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .selfmotion span,
+html .header .novel .menu > li:nth-child(2) .backcolr .selfmotion span {
+  font-size: 18px;
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  margin-left: 20px;
+  padding: 3px 0px;
+  background: white;
+  border: 1px solid #CDDFCD;
+}
+body .header .novel .menu > li:nth-child(2) .backcolr .selfmotion span:hover,
+html .header .novel .menu > li:nth-child(2) .backcolr .selfmotion span:hover {
+  color: limegreen ;
+}
+body .header .novel .menu > li:nth-child(3) .backcolr,
+html .header .novel .menu > li:nth-child(3) .backcolr {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+  width: 600px;
+  height: 600px;
+  background: white;
+  display: none;
+}
+body .header .novel .menu > li:nth-child(3) .backcolr .theme,
+html .header .novel .menu > li:nth-child(3) .backcolr .theme {
+  text-align: center;
+  font-size: 0px;
+}
+body .header .novel .menu > li:nth-child(3) .backcolr .theme h3,
+html .header .novel .menu > li:nth-child(3) .backcolr .theme h3 {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+body .header .novel .menu > li:nth-child(3) .backcolr .theme .box,
+html .header .novel .menu > li:nth-child(3) .backcolr .theme .box {
+  width: 0px;
+  height: 0px;
+  border: 30px solid;
+  border-color: transparent lightsalmon transparent transparent;
+  position: absolute;
+  left: -60px;
+  top: 110px;
+}
+body .header .novel .menu > li:nth-child(3) .backcolr .theme span,
+html .header .novel .menu > li:nth-child(3) .backcolr .theme span {
+  line-height: 70px;
+  font-size: 16px;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: limegreen;
+  margin-left: 10px;
+}
+body .header .novel .menu > li:nth-child(4) .backcolr,
+html .header .novel .menu > li:nth-child(4) .backcolr {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+  width: 600px;
+  height: 600px;
+  background: white;
+  display: none;
+}
+body .header .novel .menu > li:nth-child(4) .backcolr .theme,
+html .header .novel .menu > li:nth-child(4) .backcolr .theme {
+  text-align: center;
+  font-size: 0px;
+}
+body .header .novel .menu > li:nth-child(4) .backcolr .theme h3,
+html .header .novel .menu > li:nth-child(4) .backcolr .theme h3 {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+body .header .novel .menu > li:nth-child(4) .backcolr .theme .box,
+html .header .novel .menu > li:nth-child(4) .backcolr .theme .box {
+  width: 0px;
+  height: 0px;
+  border: 30px solid;
+  border-color: transparent lightsalmon transparent transparent;
+  position: absolute;
+  left: -60px;
+  top: 160px;
+}
+body .header .novel .menu > li:nth-child(4) .backcolr .theme span,
+html .header .novel .menu > li:nth-child(4) .backcolr .theme span {
+  line-height: 70px;
+  font-size: 16px;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: limegreen;
+  margin-left: 10px;
+}
+body .header .novel #content,
+html .header .novel #content {
+  text-indent: 1.8em;
+  margin: 0px 10px;
+  padding: 50px 120px;
+  line-height: 1.7em;
+  font-family: '宋体';
+}
+body .header .novel .t1,
+html .header .novel .t1 {
+  background: #FAF9DE;
+}
+body .header .novel .t2,
+html .header .novel .t2 {
+  background: #FFF2E2;
+}
+body .header .novel .t3,
+html .header .novel .t3 {
+  background: #E3EDCD;
+}
+body .header .novel .t4,
+html .header .novel .t4 {
+  background: #DCE2F1;
+}
+body .header .novel .t5,
+html .header .novel .t5 {
+  background: #EAEAEF;
+}
+/*# sourceMappingURL=./style.css.map */

@@ -1,0 +1,134 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/4550.jpg_wh300.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+body .border,
+html .border {
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  background: sandybrown;
+  margin: 0px auto;
+  position: relative;
+  top: 150px;
+  left: 0px;
+  border-radius: 10px;
+}
+body .border .show,
+html .border .show {
+  width: 318px;
+  height: 318px;
+  margin: 0px auto;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: lightgreen;
+  border-radius: 5px;
+}
+body .border .show ul.content,
+html .border .show ul.content {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+}
+body .border .show ul.content::after,
+html .border .show ul.content::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+body .border .show ul.content li,
+html .border .show ul.content li {
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  float: left;
+  border: 1px solid white;
+  margin: 3px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+body .border .show ul.content li:nth-child(1),
+html .border .show ul.content li:nth-child(1) {
+  background-image: url('../images/j1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show ul.content li:nth-child(2),
+html .border .show ul.content li:nth-child(2) {
+  background-image: url('../images/j2.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show ul.content li:nth-child(3),
+html .border .show ul.content li:nth-child(3) {
+  background-image: url('../images/j1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show ul.content li:nth-child(4),
+html .border .show ul.content li:nth-child(4) {
+  background-image: url('../images/j2.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show ul.content li:nth-child(5),
+html .border .show ul.content li:nth-child(5) {
+  background: orangered;
+  border-radius: 8px;
+  font-size: 1.4em;
+  font-family: '楷体';
+  cursor: pointer;
+}
+body .border .show ul.content li:nth-child(5):hover,
+html .border .show ul.content li:nth-child(5):hover {
+  transition: all 0.5s;
+  color: peachpuff;
+}
+body .border .show ul.content li:nth-child(6),
+html .border .show ul.content li:nth-child(6) {
+  background-image: url('../images/j2.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show ul.content li:nth-child(7),
+html .border .show ul.content li:nth-child(7) {
+  background-image: url('../images/j1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show ul.content li:nth-child(8),
+html .border .show ul.content li:nth-child(8) {
+  background-image: url('../images/j2.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show ul.content li:nth-child(9),
+html .border .show ul.content li:nth-child(9) {
+  background-image: url('../images/j1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .border .show .active,
+html .border .show .active {
+  box-shadow: 2px 2px 20px red;
+}
+body .border span,
+html .border span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: whitesmoke;
+  display: inline-block;
+}
+/*# sourceMappingURL=./style.css.map */

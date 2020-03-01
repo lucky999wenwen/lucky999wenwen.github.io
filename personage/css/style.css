@@ -1,0 +1,12 @@
+#references .container #references-masonry .row li {
+  text-align: center;
+}
+#references .container #references-masonry .row li img {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+#references .container #detail .row #detail-slider .owl-item img {
+  height: 450px;
+}
+/*# sourceMappingURL=./style.css.map */

@@ -1,0 +1,1224 @@
+.clea() {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear() {
+    &::after {
+        .clea()
+    }
+}
+
+@keyframes move {
+    0% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateX(5deg) rotateY(360deg);
+    }
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+
+    .main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        header.nav {
+            position: absolute;
+            z-index: 8;
+            width: 100%;
+            height: 80px;
+            background: white;
+
+            .menu {
+                width: 1100px;
+                height: 80px;
+                margin: 0px auto;
+                position: relative;
+                .clear;
+
+                .left {
+                    margin-top: 40px;
+                    float: left;
+                }
+
+                .music {
+                    margin-top: 52px;
+                    margin-left: 8px;
+                    float: left;
+                }
+
+                ul.right {
+                    .clear;
+                    height: 20px;
+                    float: right;
+                    margin-top: 50px;
+
+                    >li {
+                        position: relative;
+                        font-size: 14px;
+                        font-family: '微软雅黑';
+                        height: 100%;
+                        margin-left: 34px;
+                        float: left;
+                        cursor: pointer;
+
+                        .aa {
+                            color: blue;
+
+                        }
+
+                        .bb {
+                            width: 0%;
+                            position: absolute;
+                            left: 0px;
+                            top: 0;
+                            color: black;
+                            overflow: hidden;
+
+                            img {
+                                display: block;
+                                height: 16px;
+                                border: none;
+                            }
+                        }
+                    }
+
+                }
+
+                .move {
+                    transform: all 0.3s;
+                    position: absolute;
+                    left: 772px;
+                    top: 92%;
+                    width: 21px;
+                    height: 11px;
+                    transition: all 0.5s
+                }
+            }
+        }
+
+        section.content {
+            // position: relative;
+            height: 100%;
+            margin: 0px auto;
+            overflow: hidden;
+
+            ul.list {
+                position: relative;
+                z-index: 0;
+                top: 80px;
+                height: 100%;
+                width: 100%;
+
+                >li {
+                    width: 1500px;
+                    height: 100%;
+                    margin: 0px auto;
+                    position: relative;
+
+                    &:nth-child(1) {
+                        background-image: url('../images/bg1.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        perspective: 3000px;
+
+                        ul.icon {
+                            transform-style: preserve-3d;
+                            position: relative;
+                            width: 1100px;
+                            height: 100%;
+                            margin-left: 8.9%;
+                            .clear();
+
+                            >li {
+                                height: 100%;
+                                width: 100%;
+                                float: left;
+                                position: absolute;
+                                left: 0px;
+                                top: -100%;
+                                opacity: 0;
+                                transition: all 1s;
+                                background-size: 100%;
+                                &:nth-child(1) {
+                                    transform: rotateY(0deg);
+                                    background-image: url('../images/home2.jpg');
+                                    height: 65%;
+                                    transform:rotateY(30deg) translateY(80px) translateX(-400px) translateZ(-320px);
+                                    opacity: 1;
+                                }
+
+                                &:nth-child(2) {
+                                    background-image: url('../images/home3.jpg');
+                                    height: 65%;
+                                    transform:rotateY(-30deg) translateY(80px) translateX(400px) translateZ(-320px);
+                                    opacity: 1;
+                                }
+
+                                &:nth-child(3) {
+                                    background-image: url('../images/home4.jpg');
+                                }
+
+                                &:nth-child(4) {
+                                    background-image: url('../images/home1.jpg');
+                                }
+                            }
+
+                            .active {
+                                opacity: 1;
+                            }
+                        }
+
+                        .dots {
+                            position: absolute;
+                            top: 100%;
+                            left: 43%;
+                            z-index: 5;
+                            width: 100%;
+                            height: 20px;
+                            transition: all 1s;
+
+                            span {
+                                margin-left: 10px;
+                                display: inline-block;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                background: #919198;
+                                cursor: pointer;
+                                transition: all 0.3s;
+                            }
+
+                            .active {
+                                background: white;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background-image: url('../images/bg3.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        overflow: hidden;
+                        .iconic{
+                            .top{
+                                width: 359px;
+                                height: 283px;
+                                background-image: url('../images/plane1.png');
+                                background-position:0px 0px;
+                                background-repeat:no-repeat;
+                                position: absolute;
+                                left: 300px;
+                                top: -200px;
+                                opacity: 0;
+                                transition: all 1s;
+                            }
+                            .left{
+                                width: 359px;
+                                height: 283px;
+                                background-image: url('../images/plane2.png');
+                                background-position:0px 0px;
+                                background-repeat:no-repeat;
+                                position: absolute;
+                                left: -100px;
+                                top: 200px;
+                                transition: all 1s;
+                            }
+                            .bottom{
+                                width: 359px;
+                                height: 283px;
+                                background-image: url('../images/plane3.png');
+                                background-position:0px 0px;
+                                background-repeat:no-repeat;
+                                position: absolute;
+                                left: 600px;
+                                top: 350px;
+                                transition: all 1s;
+                            }
+                        }
+                      
+                        >.contenttwo {
+                            width: 1100px;
+                            height: 100%;
+                            position: relative;
+                            // background: lightcoral;
+                            margin: 0px auto;
+
+                            h2 {
+                                font-size: 4.5em;
+                                color: #5F9EA0;
+                                line-height: 60px;
+                                font-weight: bold;
+                                padding: 80px 0px;
+                            }
+
+                            p {
+                                padding: 40px 0;
+                                width: 400px;
+                                color: #5F9EA0;
+                            }
+
+                            >.icons {
+                                position: absolute;
+                                right: 6%;
+                                top: 80px;
+                                width: 480px;
+                                height: 410px;
+
+                                // background:red;
+                                ul.srossicon {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    .clear();
+
+                                    // background: yellow;
+                                    >li {
+                                        position: absolute;
+                                        top: 0px;
+                                        left: 0px;
+                                        width: 9px;
+                                        height: 100%;
+                                        cursor: pointer;
+
+                                        &:nth-child(1) {
+                                            position: relative;
+                                            background-image: url('../images/plus_row.png');
+
+                                            >.cont {
+                                                width: 120px;
+                                                height: 132px;
+
+                                                 &:hover {
+                                                    .show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    .hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                                >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                > .hidden {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 4px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                           > .conttwo {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.showtwo {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hiddentwo {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.showtwo {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hiddentwo {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 139px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                            > .contthree {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hidden {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 273px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+
+
+
+                                        }
+
+                                        &:nth-child(2) {
+                                            background-image: url('../images/plus_row.png');
+                                            margin-left: 120px;
+                                            // background:red;
+                                            >.cont {
+                                                width: 120px;
+                                                height: 132px;
+
+                                                 &:hover {
+                                                    .show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    .hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                                >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                > .hidden {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 4px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                           > .conttwo {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.showtwo {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hiddentwo {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.showtwo {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hiddentwo {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 139px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                            > .contthree {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hidden {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 273px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(3) {
+                                            background-image: url('../images/plus_row.png');
+                                            margin-left: 240px;
+                                            >.cont {
+                                                width: 120px;
+                                                height: 132px;
+
+                                                 &:hover {
+                                                    .show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    .hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                                >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                > .hidden {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 4px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                           > .conttwo {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.showtwo {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hiddentwo {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.showtwo {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hiddentwo {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 139px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                            > .contthree {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hidden {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 273px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(4) {
+                                            background-image: url('../images/plus_row.png');
+                                            margin-left: 360px;
+                                            >.cont {
+                                                width: 120px;
+                                                height: 132px;
+
+                                                 &:hover {
+                                                    .show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    .hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                                >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                > .hidden {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 4px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                           > .conttwo {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.showtwo {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hiddentwo {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.showtwo {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hiddentwo {
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 139px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                            > .contthree {
+                                                width: 120px;
+                                                height: 132px;
+                                                
+
+                                                &:hover {
+                                                    >.show {
+                                                        transition: 0.5s;
+                                                        opacity: 0;
+                                                        transform: rotateY(90deg);
+                                                    }
+
+                                                    >.hidden {
+                                                        transition: 1s;
+                                                        opacity: 1;
+                                                        transform: rotateY(0deg);
+                                                    }
+                                                }
+
+                                               >.show {
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    text-align: center;
+                                                    margin-left: 8px;
+                                                    line-height: 132px;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    opacity: 1;
+                                                }
+
+                                                >.hidden {
+                                                    padding: 10px;
+                                                    text-indent: 1em;
+                                                    font-weight:12px;
+                                                    transition: 0.5s;
+                                                    position: absolute;
+                                                    top: 273px;
+                                                    left: 5px;
+                                                    z-index: 2;
+                                                    width: 120px;
+                                                    height: 132px;
+                                                    // line-height: 50px;
+                                                    text-align: center;
+                                                    color: white;
+                                                    opacity: 0;
+                                                    transform: rotateY(-180deg);
+                                                    background: rgba(7, 7, 8, 0.7)
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(5) {
+                                            background-image: url('../images/plus_row.png');
+                                            margin-left: 480px;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background-image: url('../images/bg4.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-size: 150%;
+                        // background-position: -200px 200px;
+                        .content{
+                            width: 1100px;
+                            height: 100%;
+                            // position: relative;
+                            // background: lightcoral;
+                            margin: 0px auto;
+                            h2 {
+                                font-size: 4.5em;
+                                color: #5F9EA0;
+                                line-height: 60px;
+                                font-weight: bold;
+                                padding: 80px 0px;
+                            }
+                            ul.icon{
+                               li.journey{
+                                width:220px;
+                                height:133px;
+                                background:red;
+                               } 
+                            }
+                        }
+                      
+                    }
+
+                    &:nth-child(4) {
+                        background-image: url('../images/bg5.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        >.content {
+                            width: 1100px;
+                            margin: 0px auto;
+                            // background: lightblue;
+
+
+                            h2 {
+                                font-size: 4.5em;
+                                color: #5F9EA0;
+                                line-height: 60px;
+                                font-weight: bold;
+                                padding: 80px 0px;
+                            }
+
+                            p {
+                                padding: 40px 0;
+                                width: 400px;
+                                color: #5F9EA0;
+                                font-weight: bold;
+                            }
+
+                            .banner {
+                                position: relative;
+                                overflow: hidden;
+                                float: right;
+                                margin-top: -450px;
+                                margin-right: 130px;
+                                width: 260px;
+                                height: 210px;
+                                border: 5px solid #E4ECEC;
+                                border-radius: 5px;
+                                background: red;
+                                background-image: url('../images/about2.jpg');
+                                background-repeat: no-repeat;
+                                transition: all 1s;
+
+                                &:hover {
+                                    >ul.sunbanner li {
+                                        &:nth-child(1) {
+                                            div.top {
+                                                transition: all 0.5s;
+                                                margin-top: 105px;
+                                            }
+                                        }
+
+                                        &:nth-child(2) {
+                                            div.left {
+                                                transition: all 0.5s;
+                                                margin-left: -130px;
+                                            }
+                                        }
+
+                                        &:nth-child(3) {
+                                            div.right {
+                                                transition: all 0.5s;
+                                                margin-top: -105px;
+                                            }
+                                        }
+
+                                        &:nth-child(4) {
+                                            div.bottom {
+                                                transition: all 0.5s;
+                                                margin-left: 130px;
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                >ul.sunbanner {
+                                    width: 100%;
+                                    height: 100%;
+
+                                    >li {
+
+                                        position: absolute;
+                                        width: 50%;
+                                        height: 50%;
+                                        overflow: hidden;
+
+                                        &:nth-child(1) {
+                                            top: 0;
+                                            left: 0;
+
+                                            div.top {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background: red;
+                                                background-image: url('../images/about1.jpg');
+                                            }
+
+                                        }
+
+                                        &:nth-child(2) {
+                                            right: 0;
+                                            top: 0;
+
+                                            >div.left {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background: red;
+                                                background-image: url('../images/about1.jpg');
+                                                background-position: right top;
+                                            }
+
+                                        }
+
+                                        &:nth-child(3) {
+                                            top: 50%;
+                                            right: 0;
+
+                                            div.right {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background-image: url('../images/about1.jpg');
+                                                background-position: right bottom;
+                                            }
+
+
+                                        }
+
+                                        &:nth-child(4) {
+                                            bottom: 0;
+                                            left: 0;
+
+                                            div.bottom {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background: green;
+                                                background-image: url('../images/about1.jpg');
+                                                background-position: left bottom;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+
+                            .banne {
+                                position: relative;
+                                overflow: hidden;
+                                float: right;
+                                margin-top: -190px;
+                                margin-right: 280px;
+                                width: 260px;
+                                height: 210px;
+                                border: 5px solid #E4ECEC;
+                                border-radius: 5px;
+                                background: red;
+                                background-image: url('../images/about3.jpg');
+                                background-repeat: no-repeat;
+                                transition: all 1s;
+
+                                &:hover {
+                                    >ul.sunbanner li {
+                                        &:nth-child(1) {
+                                            div.top {
+                                                transition: all 0.5s;
+                                                margin-top: 105px;
+                                            }
+                                        }
+
+                                        &:nth-child(2) {
+                                            div.left {
+                                                transition: all 0.5s;
+                                                margin-left: -130px;
+                                            }
+                                        }
+
+                                        &:nth-child(3) {
+                                            div.right {
+                                                transition: all 0.5s;
+                                                margin-top: -105px;
+                                            }
+                                        }
+
+                                        &:nth-child(4) {
+                                            div.bottom {
+                                                transition: all 0.5s;
+                                                margin-left: 130px;
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                >ul.sunbanner {
+                                    width: 100%;
+                                    height: 100%;
+
+                                    >li {
+                                        position: absolute;
+                                        width: 50%;
+                                        height: 50%;
+                                        overflow: hidden;
+
+                                        &:nth-child(1) {
+                                            top: 0;
+                                            left: 0;
+
+                                            div.top {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background: red;
+                                                background-image: url('../images/about4.jpg');
+                                            }
+
+                                        }
+
+                                        &:nth-child(2) {
+                                            right: 0;
+                                            top: 0;
+
+                                            >div.left {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background: red;
+                                                background-image: url('../images/about4.jpg');
+                                                background-position: right top;
+                                            }
+
+                                        }
+
+                                        &:nth-child(3) {
+                                            top: 50%;
+                                            right: 0;
+
+                                            div.right {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background-image: url('../images/about4.jpg');
+                                                background-position: right bottom;
+                                            }
+
+
+                                        }
+
+                                        &:nth-child(4) {
+                                            bottom: 0;
+                                            left: 0;
+
+                                            div.bottom {
+                                                transition: all 0.5s;
+                                                width: 100%;
+                                                height: 100%;
+                                                background: green;
+                                                background-image: url('../images/about4.jpg');
+                                                background-position: left bottom;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        background-image: url('../images/bg2.jpg');
+                        background-repeat: no-repeat;
+                        background-size: 140%;
+                        background-position: right top;
+                    }
+                }
+            }
+
+            ul.dot {
+                position: fixed;
+                top: 50%;
+                right: 0;
+                z-index: 50;
+                height: 100%;
+                width: 20px;
+
+                li {
+                    border: 1px solid white;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+
+                .active {
+                    background: white;
+                }
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="border">
+			<div class="show">
+				<ul class="content">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li><b>立即抽奖</b></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<span></span>
+		</div>
+		<script>
+			var arr = [1, 2, 3, 6, 9, 8, 7, 4];
+			var m = 0;
+			var delay = 100;
+			var q = 0;
+			var canclick = true;
+			$(".border .show .content li")
+				.eq(4)
+				.click(function() {
+					var randomNum = Math.floor(Math.random() * 8);
+					// console.log(randomNum);
+					start(randomNum);
+				});
+			function start(q) {
+				if (canclick) {
+					canclick = false;
+					delay++
+					var id = setInterval(function() {
+						m++;
+						var x = arr.shift();
+						if (m >= arr.length * 4) {
+							delay+=200
+							if ( m % 8 == q) {
+								m = 0;
+								canclick = true;
+								clearInterval(id);
+							}
+						}
+						
+						arr.push(x);
+						$(".border .show .content li")
+							.eq(x - 1)
+							.addClass("active")
+							.siblings()
+							.removeClass("active");
+					}, delay);
+					
+					
+				}
+			}
+		</script>
+	</body>
+</html>

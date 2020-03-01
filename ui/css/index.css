@@ -1,0 +1,282 @@
+.navbar-default{
+    background-color: #222222;
+    border: 0;
+    border-radius: 0;
+}
+.navbar{
+    transition: all 1s;
+    margin-bottom: 0px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0);
+}
+.navbar .container .navbar-header {
+    height: 50px;
+    position: relative;
+}
+
+.navbar .container .navbar-header .navbar-brand{
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    background-image: url('../images/brand.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 20%;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 0px;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #03585e;
+}
+.banner_box img{
+    width: 100%;
+    text-align: center; 
+}
+.carousel-indicators{
+    bottom: 0;
+}
+/* --------------分割线--------------- */
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+h2{
+    color: #1b1b1b;
+    font-size: 18px;
+    margin: 20px 0;
+}
+h3{
+    color: #1b1b1b;
+    font-size: 14px;
+    margin-top: 10px;
+}
+h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* -----------------1------------------------- */
+.cont1{
+    width: 100%;
+    margin: 30px 0;
+}
+.boxB{
+    text-align: center;
+}
+.cont1 .boxB .fuwu-btn > img{
+    margin: auto;
+}
+
+/* ---------------------2--------------------- */
+.cont2{
+    width: 100%;
+    background-color: rgba(8,188,208,0.06);
+    padding: 50px 0;
+}
+.cont2 h2{
+    color: #333;
+    font-size: 30px;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+.cont2 p{
+    /* height: 40px; */
+    line-height: 40px;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.cont2 p span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #03585e;
+    margin-right: 20px;
+    float: left;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+.cont2 p::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* ------------------------------------- */
+.cont3{
+    width: 100%;
+    padding: 50px 0;
+}
+.cont3 h2{
+    color: #333;
+    font-size: 30px;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+.cont3 p{
+    line-height: 40px;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.cont3 p span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #03585e;
+    margin-right: 20px;
+    float: left;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+/* ----------------4--------------------- */
+.cont4 a{
+    text-decoration: none;
+    color: #1b1b1b;
+}
+.cont4 h3{
+    margin: 10px 0 20px;
+}
+.cont4 .content{
+    margin-bottom: 30px;
+}
+.cont4 .boxC{
+    /* width: 350px; */
+    height: 232.92px;
+    margin-bottom: 30px;
+}
+.cont4 .container .boxC .img {
+    width: 100%;
+    height: 228px;
+  }
+  .cont4 .container .boxC .hovereffect{
+    width: 100%;
+  }
+  .cont4 .container .boxC:nth-of-type(1) .img {
+    background-image: url("../images/GOOD\ TIMES.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .cont4 .container .boxC:nth-of-type(2) .img {
+    background-image: url("../images/一宿1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .cont4 .container .boxC:nth-of-type(3) .img {
+    background-image: url("../images/GOOD\ TIMES.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .cont4 .container .boxC:nth-of-type(4) .img {
+    background-image: url("../images/古城楼.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .cont4 .container .boxC:nth-of-type(5) .img {
+    background-image: url("../images/花果茶1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .cont4 .container .boxC:nth-of-type(6) .img {
+    background-image: url("../images/春节icon.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 768px) {
+    .cont4 .container .boxC{
+      margin-bottom: 30px;
+    }
+    .cont4 .container .boxC .img {
+      height: 200px;
+    }
+  }
+/* ---------------------moreBtn----------- */
+.more a{
+    display: block;
+    width: 158px;
+    height: 42px;
+    border: 1px solid #03585e;
+    border-radius: 2px;
+    color: #03585e;
+    margin: auto;
+}
+.more a .moreBtn{    
+    font-size: 14px;
+    line-height: 42px;
+    text-align: center;      
+}
+.more a:hover .moreBtn{
+    background-color: #03585e;
+    color: #fff;
+}
+/* -----------------5-------------------- */
+.cont5{
+    margin-top: 30px;
+    color: #1b1b1b;
+}
+.cont5 p{
+    font-size: 14px;
+    text-align: center;
+}
+/* ----------------footer 保留---------------- */
+.footer{
+    width: 100%;
+    background-color: #282c32;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+.footer span{
+    display: block;
+    /* width: 250px; */
+    height: 40px;
+    background: url("../images/footerui.png");
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.footer p{
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 17px;
+}
+.footer .touch{
+    line-height: 50px;
+}
+.fo{
+    text-align: center;
+}
+
+.footer a{
+    width: 255px;
+    height: 100px;
+    color: #fff;
+    font-size: 16px;
+    /* text-align: center; */
+    line-height: 33px;
+}
+.footer .wechat{
+    text-align: center;
+}
+.footer .wechat img{
+    width: 100px;
+    height: 100px;
+}

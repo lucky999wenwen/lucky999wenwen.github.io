@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>QQ音乐</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Srisakdi:400,700&amp;subset=latin-ext,thai,vietnamese"
+        rel="stylesheet" />
+    <link
+        href="http://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="music/grid.css">
+    <link rel="stylesheet" href="music/music.css">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header class="head">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="menunav">menu</span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img class="img-responsive" src="images/logo@2x.png" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav menu">
+                        <li class=""><a href="#">音乐馆 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">我的音乐</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">客户端 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">开放平台</a></li>
+                        <li><a href="#">VIP</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input list="test" type="text" class="form-control" placeholder="搜索音乐、MV、歌单、用户">
+                            <span class="serach"></span>
+                            <datalist id="test">
+                                <!-- <option value="一号">xxxx</option> -->
+                                <!-- <option value="二号"></option> -->
+                            </datalist>
+                            <!-- <span>搜所图标</span> -->
+                        </div>
+
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">开通绿钻豪华版</a></li>
+                        <li><a href="#">开通付费包</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section class="select">
+        <div class="container">
+            <ul class="row">
+                <li class="col-xs-2 col-sm-1 col-sm-offset-2 col-md-1  col-md-offset-2">
+                    <a href="">首页</a>
+                </li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">歌手</a>
+                </li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">新碟</a>
+                </li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">排行榜</a>
+                </li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">分类歌单</a>
+                </li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">电台</a>
+                </li>
+                <li></li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">MV</a>
+                </li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">数字专辑</a>
+                </li>
+                <li class="col-xs-2 col-sm-1 col-md-1">
+                    <a href="">票务</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="play">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-">
+                    <audio src="" autoplay controls>
+                        <!-- <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg"> -->
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recommend ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <h2>歌单推荐</h2>
+                </div>
+                <ul class="col-xs-12 col-sm-12 col-md-12 ">
+                    <li class="col-xs-2 col-sm-2 col-md-1  col-md-offset-3"><a href="">为你推荐</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">摇滚</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">金典国语 </a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">网络歌曲</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">官方歌单</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">情歌</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="container-fluid">
+            <div id="carousel-example-generic" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"
+                        style="border:1px solid #66C27C"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <ul class="item active">
+                        <li class="col-xs-6 col-xs-offset-1 col-sm-2 col-md-2 col-md-offset-1">
+                            <img class="img-responsive" src="images/300.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (1).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (2).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (3).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (1).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </ul>
+                    <ul class="item">
+                        <li class="col-xs-6 col-xs-offset-1 col-sm-2 col-md-2 col-md-offset-1">
+                            <img class="img-responsive" src="images/300.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (1).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (2).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (3).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <li class=" col-xs-6 col-sm-2 col-md-2 ">
+                            <img class="img-responsive" src="images/300 (1).jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4><a href="">孤单时刻，需要人陪</a></h4>
+                            <p>播放量:46.4万</p>
+                        </li>
+                        <div class="carousel-caption">
+                        </div>
+                    </ul>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="newsongsend ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <h2>新歌首发</h2>
+                </div>
+                <ul class="col-xs-12 col-sm-12 col-md-12 ">
+                    <button class="col-xs-1 col-sm-1 col-md-1"><i></i><span> 播放全部</span></button>
+                    <li class="col-xs-2 col-sm-2 col-md-1  col-md-offset-2"><a href="">最新</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">内地</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">港台 </a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">欧美</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">韩国</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">日本</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="myCarousela" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousela" data-slide-to="0" class="active" style="border:1px solid #66C27C">
+                    </li>
+                    <li data-target="#myCarousela" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                    <li data-target="#myCarousela" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                    <li data-target="#myCarousela" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+
+                <div class="container">
+                    <div class="carousel-inner" role="listbox">
+                        <ul class="item active">
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                        <ul class="item">
+                            <li class="col-xs-4 col-sm-2 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-2 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-2 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                        <ul class="item">
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                        <ul class="item">
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <li class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-responsive"
+                                                src="./images/T002R90x90M000003gpfek1UWkeT_1.jpg" alt="...">
+                                            <div class="logo"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading songname"><a href="">青春抛物线</a></h4>
+                                        <p class="author"><a href="">胡夏</a></p>
+                                    </div>
+                                    <div class="time">03:19</div>
+                                </div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousela" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousela" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="recommendation">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <h2>精彩推荐</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="myCarouselas" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarouselas" data-slide-to="0" class="active" style="border:1px solid #66C27C">
+                    </li>
+                    <li data-target="#myCarouselas" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                    <li data-target="#myCarouselas" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                    <li data-target="#myCarouselas" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+
+                <div class="container">
+                    <div class="carousel-inner" role="listbox">
+                        <ul class="item active">
+                            <li class="col-xs-6  col-sm-6 col-md-6">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <li class=" col-xs-6 col-sm-6 col-md-6 ">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                        <ul class="item">
+                            <li class="col-xs-6  col-sm-6 col-md-6">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <li class=" col-xs-6 col-sm-6 col-md-6 ">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                        <ul class="item">
+                            <li class="col-xs-6  col-sm-6 col-md-6">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <li class=" col-xs-6 col-sm-6 col-md-6 ">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                        <ul class="item">
+                            <li class="col-xs-6  col-sm-6 col-md-6">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <li class=" col-xs-6 col-sm-6 col-md-6 ">
+                                <img class="img-responsive" src="images/1848073 (1).jpg" alt="...">
+                                <div class="logo"></div>
+                            </li>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarouselas" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarouselas" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="newsong">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <h2>新歌首发</h2>
+                </div>
+                <ul class="col-xs-12 col-sm-12 col-md-12 nav nav-tabs" role="tablist">
+                    <li role="presentation" class="col-xs-2 col-sm-2 col-md-1  col-md-offset-3 active"><a
+                            href="#hinterland" aria-controls="hinterland" role="tab" data-toggle="tab">内地</a></li>
+                    <li role="presentation" class="col-xs-2 col-sm-2 col-md-1 "><a href="#hongkong"
+                            aria-controls="hongkong" role="tab" data-toggle="tab">港台</a></li>
+                    <li role="presentation" class="col-xs-2 col-sm-2 col-md-1 "><a href="#occidental"
+                            aria-controls="occidental" role="tab" data-toggle="tab">欧美</a></li>
+                    <li role="presentation" class="col-xs-2 col-sm-2 col-md-1 "><a href="#korean" aria-controls="korean"
+                            role="tab" data-toggle="tab">韩国</a></li>
+                    <li role="presentation" class="col-xs-2 col-sm-2 col-md-1 "><a href="#japan" aria-controls="japan"
+                            role="tab" data-toggle="tab">日本</a></li>
+                    <li role="presentation" class="col-xs-2 col-sm-2 col-md-1 "><a href="#other" aria-controls="other"
+                            role="tab" data-toggle="tab">其它</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container list">
+            <div class="rows">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="hinterland">
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="hongkong">
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000010w9cw2Ru0bI_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="occidental">
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000010w9cw2Ru0bI_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="korean">
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000010w9cw2Ru0bI_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="japan">
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000010w9cw2Ru0bI_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="other">
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000010w9cw2Ru0bI_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M000004aibJK3qVEeK_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                        <li class="col-xss-2  col-sms-2 col-mds-2">
+                            <img class="img-responsive" src="images/T002R300x300M0000025PgYH2Wrcdf_1.jpg" alt="...">
+                            <div class="logo"></div>
+                            <h4 class="songname"><a href="">所以少年人</a></h4>
+                            <p class="title">水木年华</p>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rankinglist">
+        <div class="container">
+            <div class="rows">
+                <h2>排行榜</h2>
+                <ul class="list">
+                    <li class="col-xss-2  col-sms-2 col-mds-2">
+                        <div class="content">
+                            <h4>巅峰榜</h4>
+                            <h3>流行指数</h3>
+                            <div class="logo"></div>
+                            <h5 class="songname"><i>1</i> <span>像极了</span></h5>
+                            <P class="name">永彬Ryan.B</P>
+                            <h5 class="songname"><i>2</i> <span>跟着感觉走 (Live)</span></h5>
+                            <P class="name">那英/肖战</P>
+                            <h5 class="songname"><i>3</i> <span>一个故事</span></h5>
+                            <P class="name">张杰</P>
+                        </div>
+                    </li>
+                    <li class="col-xss-2  col-sms-2 col-mds-2">
+                        <div class="content">
+                            <h4>巅峰榜</h4>
+                            <h3>热歌</h3>
+                            <div class="logo"></div>
+                            <h5 class="songname"><i>1</i> <span>像极了</span></h5>
+                            <P class="name">永彬Ryan.B</P>
+                            <h5 class="songname"><i>2</i> <span>跟着感觉走 (Live)</span></h5>
+                            <P class="name">那英/肖战</P>
+                            <h5 class="songname"><i>3</i> <span>一个故事</span></h5>
+                            <P class="name">张杰</P>
+                        </div>
+                    </li>
+                    <li class="col-xss-2  col-sms-2 col-mds-2">
+                        <div class="content">
+                            <h4>巅峰榜</h4>
+                            <h3>新歌</h3>
+                            <div class="logo"></div>
+                            <h5 class="songname"><i>1</i> <span>像极了</span></h5>
+                            <P class="name">永彬Ryan.B</P>
+                            <h5 class="songname"><i>2</i> <span>跟着感觉走 (Live)</span></h5>
+                            <P class="name">那英/肖战</P>
+                            <h5 class="songname"><i>3</i> <span>一个故事</span></h5>
+                            <P class="name">张杰</P>
+                        </div>
+                    </li>
+                    <li class="col-xss-2  col-sms-2 col-mds-2">
+                        <div class="content">
+                            <h4>巅峰榜</h4>
+                            <h3>欧美</h3>
+                            <div class="logo"></div>
+                            <h5 class="songname"><i>1</i> <span>像极了</span></h5>
+                            <P class="name">永彬Ryan.B</P>
+                            <h5 class="songname"><i>2</i> <span>跟着感觉走 (Live)</span></h5>
+                            <P class="name">那英/肖战</P>
+                            <h5 class="songname"><i>3</i> <span>一个故事</span></h5>
+                            <P class="name">张杰</P>
+                        </div>
+                    </li>
+                    <li class="col-xss-2  col-sms-2 col-mds-2">
+                        <div class="content">
+                            <h4>巅峰榜</h4>
+                            <h3>韩国</h3>
+                            <div class="logo"></div>
+                            <h5 class="songname"><i>1</i> <span>像极了</span></h5>
+                            <P class="name">永彬Ryan.B</P>
+                            <h5 class="songname"><i>2</i> <span>跟着感觉走 (Live)</span></h5>
+                            <P class="name">那英/肖战</P>
+                            <h5 class="songname"><i>3</i> <span>一个故事</span></h5>
+                            <P class="name">张杰</P>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="mv">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <h2>MV</h2>
+                </div>
+                <ul class="col-xs-12 col-sm-12 col-md-12 nav">
+                    <li class="col-xs-2 col-sm-2 col-md-1  col-md-offset-3"><a href="">精选</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">内地</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">韩国 </a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">港台</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">欧美</a></li>
+                    <li class="col-xs-2 col-sm-2 col-md-1 "><a href="">日本</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="mysCarousela" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#mysCarousela" data-slide-to="0" class="active" style="border:1px solid #66C27C">
+                    </li>
+                    <li data-target="#mysCarousela" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                    <li data-target="#mysCarousela" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                    <li data-target="#mysCarousela" data-slide-to="1" style="border:1px solid #66C27C"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+
+                <div class="container list">
+                    <div class="rows">
+                        <div class="carousel-inner" role="listbox">
+                            <ul class="item active">
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <div class="carousel-caption">
+                                    ...
+                                </div>
+                            </ul>
+                            <ul class="item">
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <div class="carousel-caption">
+                                    ...
+                                </div>
+                            </ul>
+                            <ul class="item">
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <div class="carousel-caption">
+                                    ...
+                                </div>
+                            </ul>
+                            <ul class="item">
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <li class="col-xss-2  col-sms-2 col-mds-2">
+                                    <img class="img-responsive" src="images/T015R640x360M101003nOnaX3CUdzs.jpg"
+                                        alt="...">
+                                    <div class="logo"></div>
+                                    <h4 class="songname"><a href="">大约在冬季</a></h4>
+                                    <p class="title">齐秦</p>
+                                    <div class="playtime">
+                                        <em></em>
+                                        <span>11万</span>
+                                    </div>
+                                </li>
+                                <div class="carousel-caption">
+                                    ...
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#mysCarousela" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#mysCarousela" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- <footer class="logo">
+        <div class="container">
+            <div class="rows">
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <h4>下载QQ音乐客户端</h4>
+                    <ul class="col-xs-12 col-sm-12 col-md-12 footer-logo">
+                        <li class="col-xs-3 col-sm-3 col-md-3">
+                            <div class="logo"></div>
+                            <p>PC版</p>
+                        </li>
+                        <li class="col-xs-3 col-sm-3 col-md-3">
+                            <div class="logo"></div>
+                            <p>Mac版</p>
+                        </li>
+                        <li class="col-xs-3 col-sm-3 col-md-3">
+                            <div class="logo"></div>
+                            <p>Android版</p>
+                        </li>
+                        <li class="col-xs-3 col-sm-3 col-md-3">
+                            <div class="logo"></div>
+                            <p>iPhone版</p>
+                        </li>
+                    </ul>
+                    <h5>开放平台</h5>
+                    <span>QQ音乐开放平台</span>
+                    <i>腾讯音乐人</i>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="list">
+                        <h4>特色产品</h4>
+                        <ul class="col-xs-12 col-sm-12 col-md-12 footer-logo">
+                            <li class="col-xs-3 col-sm-3 col-md-3">
+                                <div class="logo"></div>
+                                <p>全民K歌</p>
+                                <h6>车载互联</h6>
+                            </li>
+                            <li class="col-xs-3 col-sm-3 col-md-3">
+                                <div class="logo"></div>
+                                <p>Super Sound</p>
+                                <h6>QQ演出</h6>
+                            </li>
+                            <li class="col-xs-3 col-sm-3 col-md-3">
+                                <div class="logo"></div>
+                                <p>QPlay</p>
+                            </li>
+                        </ul>
+                        <h5>开放平台</h5>
+                        <span>腾讯音乐</span>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="logo"></div>
+                    <h4>合作链接</h4>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <p><a href="">CJ ENM</a></p>
+                        <p><a href="">最新版QQ</a></p>
+                        <p><a href="">QQ浏览器</a></p>
+                        <p><a href="">企鹅FM</a></p>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <p><a href="">腾讯视频</a></p>
+                        <p><a href="">腾讯社交广告</a></p>
+                        <p><a href="">腾讯微云</a></p>
+                        <p><a href="">智能电视网</a></p>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <p><a href="">手机QQ空间</a></p>
+                        <p><a href="">电脑管家</a></p>
+                        <p><a href="">腾讯云</a></p>
+                        <p><a href="">当贝市场</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row icon">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <a href="">关于腾讯 | </a>
+                    <a href=""> About Tencent | </a>
+                    <a href=""> 服务条款 | </a>
+                    <a href=""> 用户服务协议 | </a>
+                    <a href=""> 隐私政策 | </a>
+                    <a href=""> 权利声明 | </a>
+                    <a href=""> 广告服务 | </a>
+                    <a href=""> 腾讯招聘 | </a>
+                    <a href="">客服中心 | </a>
+                    <a href=""> 网站导航</a>
+                </div>
+                <div  class="col-xs-12 col-sm-12 col-md-12">
+                    <span>Copyright © 1998 - 2019 Tencent. </span>
+                    <a href="">All Rights Reserved.</a>
+                </div>
+                <div  class="col-xs-12 col-sm-12 col-md-12">
+                        <span>腾讯公司</span>
+                        <a href="">版权所有</a>
+                        <a href="">腾讯网络文化经营许可证</a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="./js/js.js" class="start"></script>
+</body>
+
+</html>
