@@ -20,7 +20,6 @@
   - [QQ音乐](https://lucky999wenwen.github.io/QQmusic/music)
   - [婚礼](https://lucky999wenwen.github.io/wedding)
   - [newboots](https://lucky999wenwen.github.io/newboots)
-  - [wenwen](https://lucky999wenwen.github.io/ui/index)
 - CSS3 
   - [2D](https://lucky999wenwen.github.io/css2d)
   - [3D立体](https://lucky999wenwen.github.io/loading+C3-3Dbox)
@@ -32,7 +31,6 @@
 - VUE.js
   - [todo](https://lucky999wenwen.github.io/todo)
   - [唯我音乐](https://lucky999wenwen.github.io/weimemusic/index)
-  - [唯我库视频](https://lucky999wenwen.github.io/changku/index)
 - react.js
 - 小程序
 - node.js
